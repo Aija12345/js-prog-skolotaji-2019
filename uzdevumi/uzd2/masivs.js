@@ -1,21 +1,32 @@
-let masivs = [];
 
-function iegutIndex(i);{
-return masivs[i]
+function pievienot(){
+const a = parseInt(prompt('ievadi skaitli'));
 
+masivs.push(a);
+print();
 }
-function mainitPecIndeksa(i, vertiba){
-    masivs[i]= vertiba;
-}
+function nonemt(){
+    
+    masivs.pop( );
+    print();
+    }
 
-function dzestPecIndeksa(i, vertiba){
-    masivs= masivs.splice(i,1);
-}
-function atrastVertibasIndeksa(vertiba){
-    for (let i = 0; i<masivs.lenght; i++){
-if ( vertiba === masivs[i]) {
-    return i;
-  }
-}
-return -1;
+
+   function aizvieto(){
+    
+        masivs[2]=100;
+        print();
+        }
+        function iestarpini(){
+            const b = parseInt(prompt('ievadi skaitli'));
+             masivs.splice(b,0,3000);
+            print();
+            }
+            function iznemt(){
+                const c = parseInt(prompt('norādi indeksu'));
+               masivs.splice(c,1);
+                print();
+                }
+function print(){
+document.getElementById("izvads").innerHTML = masivs;
 }
